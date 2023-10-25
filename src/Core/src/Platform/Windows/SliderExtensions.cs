@@ -9,7 +9,7 @@ using Microsoft.UI.Xaml.Media.Imaging;
 
 namespace Microsoft.Maui.Platform
 {
-	public static class SliderExtensions
+	public static class SliderExtensions // todo
 	{
 		static void UpdateIncrement(this Slider nativeSlider, ISlider slider)
 		{
@@ -150,6 +150,12 @@ namespace Microsoft.Maui.Platform
 
 				nativeSlider.ThumbImageSource = nativeThumbImageSource?.Value;
 			}
+		}
+
+		public static void UpdateOrientation(this Slider platformSlider, ISlider slider)
+		{
+			// TODO Check Orientation property of slider
+			platformSlider.Orientation = Orientation.Vertical;
 		}
 	}
 }

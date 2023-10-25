@@ -72,7 +72,7 @@ Microsoft.Maui.Controls.PointerGestureRecognizer.PointerReleasedCommand.get -> S
 Microsoft.Maui.Controls.PointerGestureRecognizer.PointerReleasedCommand.set -> void
 Microsoft.Maui.Controls.PointerGestureRecognizer.PointerReleasedCommandParameter.get -> object!
 Microsoft.Maui.Controls.PointerGestureRecognizer.PointerReleasedCommandParameter.set -> void
-Microsoft.Maui.Controls.Slider.Orientation.get -> Microsoft.Maui.Controls.ItemsLayoutOrientation
+Microsoft.Maui.Controls.Slider.Orientation.get -> Microsoft.Maui.ControlOrientation
 Microsoft.Maui.Controls.Slider.Orientation.set -> void
 override Microsoft.Maui.Controls.Slider.OnSizeAllocated(double width, double height) -> void
 static readonly Microsoft.Maui.Controls.KeyboardAccelerator.KeyProperty -> Microsoft.Maui.Controls.BindableProperty!

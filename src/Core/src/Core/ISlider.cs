@@ -27,6 +27,8 @@ namespace Microsoft.Maui
 		/// </summary>
 		IImageSource ThumbImageSource { get; }
 
+		ControlOrientation Orientation { get; }
+
 		/// <summary>
 		/// Notify when drag starts.
 		/// </summary>
@@ -36,5 +38,15 @@ namespace Microsoft.Maui
 		/// Notify when drag is completed.
 		/// </summary>
 		void DragCompleted();
+	}
+}
+
+namespace Microsoft.Maui
+{
+	public enum ControlOrientation
+	{
+		Horizontal,
+
+		Vertical,
 	}
 }

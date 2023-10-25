@@ -54,15 +54,7 @@ namespace Microsoft.Maui.Controls
 		public static readonly BindableProperty DragCompletedCommandProperty = BindableProperty.Create(nameof(DragCompletedCommand), typeof(ICommand), typeof(Slider), default(ICommand));
 
 		/// <summary>Bindable property for <see cref="Orientation"/>.</summary>
-		public static readonly BindableProperty OrientationProperty = BindableProperty.Create(nameof(Orientation), typeof(ItemsLayoutOrientation), typeof(Slider), ItemsLayoutOrientation.Horizontal, coerceValue: (bindable, value) =>
-		{
-			var slider = (Slider)bindable;
-			if ((ItemsLayoutOrientation)value == ItemsLayoutOrientation.Vertical)
-			{
-				slider.Rotation = -90;
-			}
-			return value;
-		});
+		public static readonly BindableProperty OrientationProperty = BindableProperty.Create(nameof(Orientation), typeof(ControlOrientation), typeof(Slider), ControlOrientation.Horizontal);
 
 		readonly Lazy<PlatformConfigurationRegistry<Slider>> _platformConfigurationRegistry;
 
@@ -80,18 +72,18 @@ namespace Microsoft.Maui.Controls
 		/// <param name="height">The new height of the element.</param>
 		protected override void OnSizeAllocated(double width, double height)
 		{
-			if (Orientation != ItemsLayoutOrientation.Vertical)
-			{
-				return;
-			}
-			if (HorizontalOptions == LayoutOptions.Start)
-			{
-				TranslationX = -width / 2;
-			}
-			if (HorizontalOptions == LayoutOptions.End)
-				TranslationX = width / 2;
+			//if (Orientation != ItemsLayoutOrientation.Vertical)
+			//{
+			//	return;
+			//}
+			//if (HorizontalOptions == LayoutOptions.Start)
+			//{
+			//	TranslationX = -width / 2;
+			//}
+			//if (HorizontalOptions == LayoutOptions.End)
+			//	TranslationX = width / 2;
 
-			TranslationY = height;
+			//TranslationY = height;
 		}
 
 		/// <include file="../../docs/Microsoft.Maui.Controls/Slider.xml" path="//Member[@MemberName='.ctor'][2]/Docs/*" />
@@ -177,12 +169,12 @@ namespace Microsoft.Maui.Controls
 		}
 
 		/// <summary>
-		/// Orientation of the Slider that can be "Horizontal" or "Vertical" <see cref="ItemsLayoutOrientation"/>.
+		/// Orientation of the Slider that can be "Horizontal" or "Vertical" <see cref="ControlOrientation"/>.
 		/// This is a bindable property.
 		/// </summary>
-		public ItemsLayoutOrientation Orientation
+		public ControlOrientation Orientation
 		{
-			get { return (ItemsLayoutOrientation)GetValue(OrientationProperty); }
+			get { return (ControlOrientation)GetValue(OrientationProperty); }
 			set { SetValue(OrientationProperty, value); }
 		}
 

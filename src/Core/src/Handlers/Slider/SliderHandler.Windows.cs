@@ -27,7 +27,7 @@ namespace Microsoft.Maui.Handlers
 		protected override void ConnectHandler(Slider platformView)
 		{
 			platformView.Loaded += OnPlatformViewLoaded;
-
+			
 			_pointerPressedHandler = new PointerEventHandler(OnPointerPressed);
 			_pointerReleasedHandler = new PointerEventHandler(OnPointerReleased);
 
@@ -91,10 +91,17 @@ namespace Microsoft.Maui.Handlers
 			}
 		}
 
+		public static void MapOrientation(ISliderHandler handler, ISlider slider)
+		{
+			if (handler?.PlatformView is MauiSlider mauiSlider)
+			{
+				mauiSlider.UpdateOrientation(slider);
+			}
+		}
+
 		void OnPlatformViewLoaded(object sender, RoutedEventArgs e)
 		{
 			var platformView = sender as Slider;
-
 			if (platformView is not null)
 			{
 				var thumb = platformView.GetFirstDescendant<Thumb>();

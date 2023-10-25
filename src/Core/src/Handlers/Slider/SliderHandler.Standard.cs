@@ -13,5 +13,7 @@ namespace Microsoft.Maui.Handlers
 		public static void MapMaximumTrackColor(IViewHandler handler, ISlider slider) { }
 		public static void MapThumbColor(IViewHandler handler, ISlider slider) { }
 		public static void MapThumbImageSource(IViewHandler handler, ISlider slider) { }
+
+		public static void MapOrientation(ISliderHandler handler, ISlider slider) { }
 	}
 }

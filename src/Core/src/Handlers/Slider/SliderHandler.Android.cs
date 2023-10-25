@@ -60,6 +60,11 @@ namespace Microsoft.Maui.Handlers
 			handler.PlatformView?.UpdateThumbColor(slider);
 		}
 
+		public static void MapOrientation(ISliderHandler handler, ISlider slider) {
+			
+			handler.PlatformView.Rotation = 270;
+		}
+
 		public static void MapThumbImageSource(ISliderHandler handler, ISlider slider)
 		{
 			var provider = handler.GetRequiredService<IImageSourceServiceProvider>();
@@ -99,7 +104,6 @@ namespace Microsoft.Maui.Handlers
 			{
 				if (Handler == null || seekBar == null)
 					return;
-
 				Handler.OnProgressChanged(seekBar, progress, fromUser);
 			}
 

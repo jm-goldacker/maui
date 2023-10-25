@@ -19,7 +19,6 @@ namespace Microsoft.Maui.Platform
 			var min = slider.Minimum;
 			var max = slider.Maximum;
 			var value = slider.Value;
-
 			seekBar.Progress = (int)((value - min) / (max - min) * PlatformMaxValue);
 		}
 
@@ -63,6 +62,11 @@ namespace Microsoft.Maui.Platform
 				if (seekBar.IsAlive() && thumbDrawable != null)
 					seekBar.SetThumb(thumbDrawable);
 			}
+		}
+
+		public static void UpdateOrientation(this SeekBar seekBar, ISlider slider)
+		{
+			seekBar.Rotation = 270;
 		}
 	}
 }

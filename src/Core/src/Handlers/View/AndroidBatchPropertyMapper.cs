@@ -21,7 +21,6 @@ namespace Microsoft.Maui.Handlers
 			nameof(IView.Scale),
 			nameof(IView.ScaleX),
 			nameof(IView.ScaleY),
-			nameof(IView.Rotation),
 			nameof(IView.RotationX),
 			nameof(IView.RotationY),
 			nameof(IView.AnchorX),

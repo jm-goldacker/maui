@@ -24,6 +24,7 @@ namespace Microsoft.Maui.Handlers
 			[nameof(ISlider.ThumbColor)] = MapThumbColor,
 			[nameof(ISlider.ThumbImageSource)] = MapThumbImageSource,
 			[nameof(ISlider.Value)] = MapValue,
+			[nameof(ISlider.Orientation)] = MapOrientation,
 		};
 
 		public static CommandMapper<ISlider, ISliderHandler> CommandMapper = new(ViewCommandMapper)

@@ -42,7 +42,7 @@ namespace Microsoft.Maui.Platform
 
 		public static void UpdateRotation(this AView platformView, IView view)
 		{
-			platformView.Rotation = (float)view.Rotation;
+			platformView.Rotation = 270;// (float)view.Rotation;
 		}
 
 		public static void UpdateRotationX(this AView platformView, IView view)

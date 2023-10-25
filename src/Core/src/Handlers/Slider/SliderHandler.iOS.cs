@@ -72,6 +72,8 @@ namespace Microsoft.Maui.Handlers
 				.FireAndForget(handler);
 		}
 
+		public static void MapOrientation(ISliderHandler handler, ISlider slider) { }
+
 		void OnControlValueChanged(object? sender, EventArgs eventArgs)
 		{
 			if (PlatformView == null || VirtualView == null)

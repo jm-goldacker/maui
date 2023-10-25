@@ -79,7 +79,7 @@
 
                 <VerticalStackLayout HeightRequest="150">
                     <Label Text="Vertical at Start" HorizontalOptions="Start" Style="{StaticResource Headline}"/>
-                    <Slider HorizontalOptions="Start" Orientation="Vertical" WidthRequest="100" Margin="10,0,0,0" />
+                    <Slider HorizontalOptions="Start" Orientation="Vertical"  HeightRequest="100"  />
                 </VerticalStackLayout> 
                 <VerticalStackLayout HeightRequest="150">
                     <Label Text="Vertical Centered" HorizontalOptions="Start" Style="{StaticResource Headline}"/>
